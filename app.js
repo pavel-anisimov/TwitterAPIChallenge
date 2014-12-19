@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('port', process.env.PORT || 3030);
 app.listen(app.get('port'));
 
+
 app.use('/', routes)
     .use('/api', api);
 
@@ -61,6 +62,8 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+
 
 
 module.exports = app;
