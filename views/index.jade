@@ -1,0 +1,78 @@
+extends layout
+block content
+  header
+    h1 A Little Twitter Page :
+    h3 Check the code at GitHub
+      a(href='https://github.com/pavel-anisimov/TwitterAPIChallenge')  www.github.com/pavel-anisimov/TwitterAPIChallenge
+    p
+      | We at AppDirect are interested in making a front-end with standards-compliant, asyncronous, api-driven, beautious javascript. Your task is to do just that with
+      a(href='https://dev.twitter.com/docs/api/1.1', target='_blank')  Twitter&apos;s REST api
+      | .
+    p Please complete
+      b  any
+      | number of the steps below within
+      b  5 days
+      | of us sending you this document. You may put in as many hours as you wish, but we recommend a maximum of around 5 hours. Use any framework and languages you would like (evidence of native JavaScript use encouraged) to complete the task. We will accept an email attachment of files, a link to a github repo or a url of a website where your solution is posted.
+    p We are looking for code quality, knowledge of cross-browser compatibility, quick load times, and innovation/thoughtfulness.
+  section
+    h2 Part I: get it.
+    .buttons
+      #edit Edit
+    .panel(style='display:none')
+      div # Tweets
+        input#tweetsNum(type='number')
+      div#accountsBox Tweeter accounts:
+        .row
+          input.accounts(type='text', placeholder='Add account')
+          .up ↑
+          .down ↓
+        .row
+          input.accounts(type='text', placeholder='Add account')
+          .up ↑
+          .down ↓
+        .row
+          input.accounts(type='text', placeholder='Add account')
+          .up ↑
+          .down ↓
+
+      #done Done
+
+    .tweetContainer
+      .tweetBlock
+        //The 30 most recent tweets from @AppDirect
+      .tweetBlock
+        // The 30 most recent tweets from @laughingsquid.
+      .tweetBlock
+        // The 30 most recent tweets from @techcrunch.
+    div(style='clear:both;')
+    p (Check out the
+      a(href='https://dev.twitter.com/docs/api/1/get/statuses/user_timeline', target='_blank')  User Timeline
+      | API)
+    p Each tweet should include at minimum:
+    ul
+      li The tweet content
+      li A well-formatted created_at date
+      li A link to the tweet.
+      li For retweets and mentions, the username should be included.
+    p Please note that Twitter&apos;s REST api does not accept cross-domain requests.  Feel free to use a simple proxy server, such as
+      a(target='_blank', href='http://mikerogers.io/2013/02/25/how-use-twitter-oauth-1-1-javascriptjquery.html') this.
+    p(style='color:#666;')
+      b Bonuses/for fun
+    | : Make the columns flexible for screen width so the columns fill 100% of the page width. Layout could be as small as 320px wide. Column arrangment isopen-ended.
+  section
+    h2 Part II: Meta
+    p Make an &quot;edit layout&quot; view that has a form to change the layout settings.
+    p Use HTML5 LocalStorage to store and load the layout settings.
+    p Configurable settings could possibly include:
+    ul
+      li The order of the columns.
+      li The time range of the tweets shown.
+      li The number of tweets shown in each column.
+      li The overall palette/skin of the page.
+    p The &quot;edit layout&quot; panel can appear either on the same page as the tweets page, on its own page, or embedded within the tweets layout - whichever you would like. There should be a straightforward way to toggle between edit and view modes, and it should be clear to the user which mode they are currently in.
+    p(style='color:#666;')
+      b Bonuses/for fun
+    | : Use an interaction (like drag and drop) instead of a form field to order the columns.
+
+
+

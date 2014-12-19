@@ -1,0 +1,149 @@
+body {
+  padding: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px auto;
+  width: 980px;
+  line-height: 1.2em;
+}
+a {
+  color: #00b7ff;
+}
+header,
+section {
+  padding: 20px 0;
+}
+.tweetBlock {
+  float: left;
+  display: inline;
+  width: 260px;
+  height: 520px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.tweet {
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 250px;
+  width: calc(100% - 10px);
+  font-size: 10px;
+  text-align: left;
+  display: inline-block;
+  border: 1px #808080 solid;
+  border-radius: 5px;
+}
+.tweet > .body {
+  margin: 5px 0 5px 5px;
+  width: 100%;
+  float: left;
+}
+.head > .icon {
+  margin: 0 5px 5px 0;
+  width: 45px;
+  float: left;
+  background-color: rgba(97,124,128,0.39);
+  height: 45px;
+  border-radius: 3px;
+}
+.head > .screen_name {
+  font-weight: normal;
+}
+.head > .retweeted {
+  font-weight: normal;
+}
+.head > .screen_name,
+.head > .time {
+  font-weight: normal;
+  color: #808080;
+}
+.head > div {
+  line-height: 16px;
+}
+.body .message {
+  font-weight: normal;
+}
+.tweet:hover {
+  background-color: #cff;
+  cursor: pointer;
+}
+.buttons {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#edit {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #a9a9a9;
+  cursor: pointer;
+  margin-left: calc(100% - 160px);
+  width: 70px;
+  height: 50px;
+  border: 1px solid #000;
+  line-height: 50px;
+  text-align: center;
+}
+#edit:hover {
+  background-color: #808080;
+}
+#done {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #a9a9a9;
+  cursor: pointer;
+  margin-left: calc(100% - 80px);
+  margin-bottom: 10px;
+  width: 70px;
+  height: 50px;
+  border: 1px solid #000;
+  line-height: 50px;
+  text-align: center;
+}
+#done:hover {
+  background-color: #808080;
+}
+.panel {
+  margin-bottom: 20px;
+  margin-left: calc(100% - 390px);
+  width: 300px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+}
+.panel p {
+  margin-left: 10px;
+}
+#tweetsNum {
+  width: 50px;
+}
+.accounts,
+#tweetsNum {
+  height: 26px;
+  border-radius: 4px;
+  border: 1px #808080 solid;
+  padding: 4px;
+  box-sizing: border-box;
+  margin: 5px 10px;
+}
+.up,
+.down {
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.up {
+  background-color: #00f;
+}
+.down {
+  background-color: #008000;
+  margin-left: 10px;
+}
