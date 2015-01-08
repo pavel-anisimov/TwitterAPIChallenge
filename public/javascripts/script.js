@@ -31,7 +31,7 @@
 
 			$this.append($.parseHTML( '<p>Failed to load tweets from @' + obj.accounts[obj.index] + '</p>' ));
 			console.log('Request failed.');
-		}).always(function(res, a, b) {
+		}).always(function(res) {
 			console.log('Request completed');
 		});
 	};
@@ -79,11 +79,11 @@ $(function(){
 	PopulateTweets();
 
 	$('.down').on('click', function(){
-		var $this = $(this),
-			$item = $this.parents('.row'),
-			$bigItem = $('#' + $this.siblings('input').val()),
+		var $this     = $(this),
+			$item     = $this.parents('.row'),
+			$bigItem  = $('#' + $this.siblings('input').val()),
 			$swapWith = $item.next(),
-			$swapBig = $bigItem.next();
+			$swapBig  = $bigItem.next();
 
 		$item.before($swapWith.detach());
 		$bigItem.before($swapBig.detach());
@@ -91,11 +91,11 @@ $(function(){
 	});
 
 	$('.up').on('click', function(){
-		var $this = $(this),
-			$item = $this.parents('.row'),
-			$bigItem = $('#' + $this.siblings('input').val()),
+		var $this     = $(this),
+			$item     = $this.parents('.row'),
+			$bigItem  = $('#' + $this.siblings('input').val()),
 			$swapWith = $item.prev(),
-			$swapBig = $bigItem.prev();
+			$swapBig  = $bigItem.prev();
 
 		$item.after($swapWith.detach());
 		$bigItem.after($swapBig.detach());
@@ -119,7 +119,7 @@ $(function(){
 	});
 
 	$tweetBlock.delegate('.tweet', 'click', function(){
-		var id = $(this).data('id'),
+		var id   = $(this).data('id'),
 			name = $(this).data('name');
 		window.location.href = 'https://twitter.com/' + name + '/status/' + id;
 	});
